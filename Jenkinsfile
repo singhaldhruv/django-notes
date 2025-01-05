@@ -33,7 +33,7 @@ pipeline {
         
         stage('Building Image') {
             steps {
-                dockerbuild("my-note-app","latest","dhruv2727")
+                docker_build("my-note-app","latest","dhruv2727")
                 echo "Image built successfully using shared library"
             }
         }
