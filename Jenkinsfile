@@ -1,11 +1,14 @@
+@Library("Jenkins-Shared-Library") _
+
 pipeline {
     agent { label "dhruv" }
 
     stages {
         stage('Cloning') {
             steps {
-                git url: "https://github.com/singhaldhruv/django-notes.git", branch: "main" 
-                echo "Code Cloned Successfully"
+                clone("https://github.com/singhaldhruv/django-notes.git","main") 
+
+                echo "Code Cloned Successfully using shared library"
             }
         }
 
