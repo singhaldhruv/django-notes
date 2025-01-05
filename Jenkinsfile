@@ -49,7 +49,7 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh "docker-compose down && docker-compose up -d"
-                echo "This is deploying the code successfully"
+                echo "This is deploying the code successfully again"
             }
         }
     }
